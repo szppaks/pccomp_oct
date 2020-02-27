@@ -1,0 +1,29 @@
+
+
+
+Octree-based lossy point-cloud compression with open3d and numpy
+Average compressing rate (depends on octreee depth setting parameter): 0.012 - 0.1   
+
+
+Input formats: You can get a list of supported formats from : http://www.open3d.org/docs/release/tutorial/Basic/file_io.html#point-cloud
+               (xyz,pts,ply,pcd)
+
+Usage:
+    
+Dependencies: Open3D, Numpy  (You can install theese modules:  pip install open3d, pip install numpy)    
+    
+Compress a point cloud:
+    
+octreezip(<filename>,<depth>) -> <result>
+<filename>: (str) Point Cloud file name. Saved file name: [filename without ext]_ocz.npz  (Yes, it's a numpy array file)
+<depth>   : (str) Octree depth. You can try 11-16 for best result. Bigger depht results higher precision and bigger compressed file size.
+<result>  : (str) If the compressing was success you get: "Compressed into:[comp.file name] | Storing resolution:0.003445". Storing resolution means the precision.
+                  The PC file is missing or bad: "PC is empty, bad, or missing"
+                  Other error: "Error: [error message]"
+                  
+
+Uncompressing:
+octreeunzip(<filename>) -> <result>
+<filename>: (str) Zipped Point Cloud file name (npz). Saved file name: [filename].xyz  (standard XYZ text file)
+<result>  : (str) If the compressing was success you get: "Saved: [filename].xyz"
+                  Other error: "Error: [error message]"
