@@ -114,8 +114,3 @@ def octreeunzip(pfilename):
 
 
 
-octreezip('./pc_eredeti.xyz',10)    
-
-octreeunzip('pc_eredeti.ocz.npz')
-
-
