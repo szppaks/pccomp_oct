@@ -1,9 +1,10 @@
+## Octree-based lossy point-cloud compression with open3d and numpy
 
-
-
-Octree-based lossy point-cloud compression with open3d and numpy
 Average compressing rate (depends on octreee depth setting parameter): 0.012 - 0.1   
 
+(Original article: Szutor Péter: Ipari pontfelhők tömörítése,  
+Dr. Balázs Boglárka (szerk.) Az elmélet és a gyakorlat találkozása a térinformatikában VIII. Theory meets practice in GIS Debrecen, Magyarország  
+Debreceni Egyetemi Kiadó, (2017) pp. 349-355)
 
 Input formats: You can get a list of supported formats from : http://www.open3d.org/docs/release/tutorial/Basic/file_io.html#point-cloud
                (xyz,pts,ply,pcd)
